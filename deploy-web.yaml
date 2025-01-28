@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: web
-    new: yes
+    new: foo
   name: web
 spec:
   replicas: 1
