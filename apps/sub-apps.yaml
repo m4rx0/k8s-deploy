@@ -58,7 +58,7 @@ spec:
     repoURL: https://github.com/m4rx0/k8s-deploy.git
     targetRevision: HEAD
 
- ---
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
