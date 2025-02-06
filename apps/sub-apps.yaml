@@ -2,6 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations: 
+    argocd.argoproj.io/sync-options: "Delete=false,Prune=false"
   name: sub-app-1
   namespace: argocd
 spec:
@@ -18,6 +20,8 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations: 
+    argocd.argoproj.io/sync-options: "Delete=false,Prune=false"
   name: sub-app-2
   namespace: argocd
 spec:
