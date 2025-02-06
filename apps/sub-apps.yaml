@@ -1,78 +1,78 @@
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd.argoproj.io/sync-options: "Prune=false"
-  name: sub-app-1
-  namespace: argocd
-spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: .
-    repoURL: https://github.com/m4rx0/k8s-deploy.git
-    targetRevision: HEAD
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  annotations: 
-    argocd.argoproj.io/sync-options: "Delete=false"
-  name: sub-app-2
-  namespace: argocd
-spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: .
-    repoURL: https://github.com/m4rx0/k8s-deploy.git
-    targetRevision: HEAD
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  annotations: 
-    argocd.argoproj.io/sync-options: "Delete=false,Prune=false"
-  name: sub-app-3
-  namespace: argocd
-spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: .
-    repoURL: https://github.com/m4rx0/k8s-deploy.git
-    targetRevision: HEAD
-
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  name: sub-app-4
-  namespace: argocd
-spec:
-  destination:
-    namespace: default
-    server: https://kubernetes.default.svc
-  project: default
-  source:
-    path: .
-    repoURL: https://github.com/m4rx0/k8s-deploy.git
-    targetRevision: HEAD
-
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+#   annotations:
+#     argocd.argoproj.io/sync-options: "Prune=false"
+#   name: sub-app-1
+#   namespace: argocd
+# spec:
+#   destination:
+#     namespace: default
+#     server: https://kubernetes.default.svc
+#   project: default
+#   source:
+#     path: .
+#     repoURL: https://github.com/m4rx0/k8s-deploy.git
+#     targetRevision: HEAD
+# 
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+#   annotations: 
+#     argocd.argoproj.io/sync-options: "Delete=false"
+#   name: sub-app-2
+#   namespace: argocd
+# spec:
+#   destination:
+#     namespace: default
+#     server: https://kubernetes.default.svc
+#   project: default
+#   source:
+#     path: .
+#     repoURL: https://github.com/m4rx0/k8s-deploy.git
+#     targetRevision: HEAD
+# 
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+#   annotations: 
+#     argocd.argoproj.io/sync-options: "Delete=false,Prune=false"
+#   name: sub-app-3
+#   namespace: argocd
+# spec:
+#   destination:
+#     namespace: default
+#     server: https://kubernetes.default.svc
+#   project: default
+#   source:
+#     path: .
+#     repoURL: https://github.com/m4rx0/k8s-deploy.git
+#     targetRevision: HEAD
+# 
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+#   name: sub-app-4
+#   namespace: argocd
+# spec:
+#   destination:
+#     namespace: default
+#     server: https://kubernetes.default.svc
+#   project: default
+#   source:
+#     path: .
+#     repoURL: https://github.com/m4rx0/k8s-deploy.git
+#     targetRevision: HEAD
+# 
